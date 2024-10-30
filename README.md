@@ -7,6 +7,8 @@ Adds automatic syntax highlight support SQL strings embedded in Python strings. 
 View source code [Github](https://github.com/RadoslawDeska/better-python-string-sql-refined/blob/HEAD/github.com/RadoslawDeska/better-python-string-sql-refined/).
 
 ![Image showing syntax highlighting working for SQL embedded inside a Python string](https://github.com/RadoslawDeska/better-python-string-sql-refined/blob/main/docs/demo.png)
+![Image showing syntax highlighting exclusion for print statements in Python](https://github.com/user-attachments/assets/9b762aec-2377-4318-8f3c-6c8387c62d5b)
+
 
 ## Community
 - 2024-10-30 forked from [better-python-string-sql](https://github.com/Submersible/better-python-string-sql)
