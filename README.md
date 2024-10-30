@@ -4,7 +4,7 @@ Adds automatic syntax highlight support SQL strings embedded in Python strings. 
 
 **This is still under development,** if you experience issues please try to help us fix them. :)  Auto detecting SQL, and highlighting it properly insight Python is _hard_!
 
-View source code [Github](https://github.com/Submersible/better-python-string-sql/blob/HEAD/github.com/Submersible/better-python-string-sql).
+View source code [Github](https://github.com/RadoslawDeska/better-python-string-sql-refined/blob/HEAD/github.com/RadoslawDeska/better-python-string-sql-refined/).
 
 ![Image showing syntax highlighting working for SQL embedded inside a Python string](https://github.com/Submersible/better-python-string-sql/raw/HEAD/docs/demo.png)
 
