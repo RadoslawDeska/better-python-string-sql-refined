@@ -2,12 +2,12 @@
     "fileTypes": [
         "py"
     ],
-    "injectionSelector": "L:string.quoted.multi.python, L:string.quoted.single.python, L:meta.fstring.python - (comment.line.number-sign.python, punctuation.definition.comment.python)",
+    "injectionSelector": "L:string.quoted.multi.python, L:string.quoted.single.python, L:meta.fstring.python",
     "patterns": [
         {
             "name": "meta.embedded.block.sql",
-            "begin": "\\s*((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace))",
-            "end": ";|(?=\"\"\"|\"|--|((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace)))",
+            "begin": "(?<!print\\s*\\(['\"])(?<![A-Za-z]+\\s)\\b((?i)(alter|analyze|attach|begin|commit|create|delete|detach|drop|explain|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace|with))\\b",
+            "end": "(?=(;|--|'[^\\w\\s]|\"[^\\w\\s]))",
             "beginCaptures": {
                 "1": {
                     "name": "keyword.other.DML.sql"
@@ -16,16 +16,13 @@
             "patterns": [
                 {
                     "include": "source.sql"
-                },
-                {
-                    "include": "source.python#fstring-guts"
                 }
             ]
         },
         {
             "name": "meta.embedded.block.sql",
-            "begin": "\\s*(--[^\"\\n\\r\\{\\}\\\\]*)",
-            "end": "(?=\"|\\n|\\r)",
+            "begin": "\\s*(--[^\"\\n\\r{}\\\\]*)",
+            "end": "(?=\\s*['\"\\n\\r])",
             "beginCaptures": {
                 "0": {
                     "name": "comment.line.double-dash.sql"
@@ -36,7 +33,7 @@
                     "include": "source.python#fstring-guts"
                 },
                 {
-                    "match": "[^\"\\n\\r\\{\\}\\\\]*",
+                    "match": "[^\"\\n\\r{}\\\\]*",
                     "name": "comment.line.double-dash.sql"
                 }
             ]

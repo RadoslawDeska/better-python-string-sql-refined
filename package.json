@@ -1,34 +1,31 @@
 {
-    "name": "better-python-string-sql",
-    "displayName": "better-python-string-sql",
-    "description": "highlight python strings as sql",
-    "version": "0.0.2",
-    "publisher": "Submersible",
-    "icon": "docs/logo.png",
-    "repository": {
-        "url": "https://github.com/Submersible/better-python-string-sql"
-    },
-    "engines": {
-        "vscode": "^1.0.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "grammars": [
-            {
-                "path": "./syntaxes/highlight-sql-string.tmLanguage.json",
-                "scopeName": "python-sql.injection",
-                "injectTo": [
-                    "source.python"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.block.sql": "sql"
-                }
-            }
-        ]
-    },
-    "scripts": {
-        "package": "npx vsce package"
-    }
+	"name": "better-python-string-sql-refined",
+	"displayName": "better-python-string-sql-refined",
+	"description": "highlight python strings as sql with refined precision",
+	"version": "0.0.1",
+	"publisher": "RadoslawDeska",
+	"icon": "docs/logo.png",
+	"repository": {
+		"url": "https://github.com/RadoslawDeska/better-python-string-sql-refined"
+	},
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"grammars": [
+			{
+				"path": "./syntaxes/highlight-sql-string.tmLanguage.json",
+				"scopeName": "python-sql.injection",
+				"injectTo": [
+					"source.python"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.sql": "sql"
+				}
+			}
+		]
+	}
 }
